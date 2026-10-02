@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT FASHION PAK RINO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+              <image></image>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+
+            <button class="cart-btn" onclick="bukaKeranjang()">
+                🛒 Keranjang <span id="jumlahKeranjang">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <p class="subjudul"><marquee>WELCOME TO RAZI FASHION</marquee></p>
+            <h1>Fashion Keren<br>Untuk Gaya Kamu.</h1>
+            <p>
+                Temukan berbagai pilihan baju, batik, celana,
+                dress dan fashion lainnya dengan harga terjangkau.
+            </p>
+
+            <a href="#produk" class="btn">Lihat Produk</a>
+        </div>
+
+        <div class="hero-image">
+            👕
+        </div>
+    </section>
+
+    <!-- PRODUK -->
+    <section class="produk-section" id="produk">
+
+        <div class="section-title">
+            <p>KOLEKSI KAMI</p>
+            <h2>Produk Fashion</h2>
+        </div>
+
+        <!-- FILTER -->
+        <div class="filter">
+            <button onclick="filterProduk('semua')">Semua</button>
+            <button onclick="filterProduk('baju')">Baju</button>
+            <button onclick="filterProduk('batik')">Batik</button>
+            <button onclick="filterProduk('celana')">Celana</button>
+            <button onclick="filterProduk('dress')">Dress</button>
+        </div>
+
+        <!-- DAFTAR PRODUK -->
+        <div class="produk-container" id="produkContainer">
+
+            <div class="produk-card" data-kategori="baju">
+                <div class="produk-gambar">👕</div>
+                <div class="produk-info">
+                    <p class="kategori">BAJU</p>
+                    <h3>Kaos Casual Premium</h3>
+                    <p class="deskripsi">
+                        Kaos nyaman untuk digunakan sehari-hari.
+                    </p>
+                    <div class="produk-bottom">
+                        <strong>Rp75.000</strong>
+                        <button onclick="tambahKeranjang('Kaos Casual Premium', 75000)">
+                            + Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="produk-card" data-kategori="batik">
+                <div class="produk-gambar">👔</div>
+                <div class="produk-info">
+                    <p class="kategori">BATIK</p>
+                    <h3>Batik Nusantara</h3>
+                    <p class="deskripsi">
+                        Batik dengan motif khas Indonesia.
+                    </p>
+                    <div class="produk-bottom">
+                        <strong>Rp150.000</strong>
+                        <button onclick="tambahKeranjang('Batik Nusantara', 150000)">
+                            + Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="produk-card" data-kategori="celana">
+                <div class="produk-gambar">👖</div>
+                <div class="produk-info">
+                    <p class="kategori">CELANA</p>
+                    <h3>Celana Jeans Classic</h3>
+                    <p class="deskripsi">
+                        Celana jeans cocok untuk berbagai aktivitas.
+                    </p>
+                    <div class="produk-bottom">
+                        <strong>Rp125.000</strong>
+                        <button onclick="tambahKeranjang('Celana Jeans Classic', 125000)">
+                            + Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="produk-card" data-kategori="dress">
+                <div class="produk-gambar">👗</div>
+                <div class="produk-info">
+                    <p class="kategori">DRESS</p>
+                    <h3>Dress Elegant</h3>
+                    <p class="deskripsi">
+                        Dress dengan desain sederhana dan elegan.
+                    </p>
+                    <div class="produk-bottom">
+                        <strong>Rp180.000</strong>
+                        <button onclick="tambahKeranjang('Dress Elegant', 180000)">
+                            + Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="produk-card" data-kategori="baju">
+                <div class="produk-gambar">👚</div>
+                <div class="produk-info">
+                    <p class="kategori">BAJU</p>
+                    <h3>Kemeja Casual</h3>
+                    <p class="deskripsi">
+                        Kemeja casual untuk acara santai maupun formal.
+                    </p>
+                    <div class="produk-bottom">
+                        <strong>Rp110.000</strong>
+                        <button onclick="tambahKeranjang('Kemeja Casual', 110000)">
+                            + Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="produk-card" data-kategori="celana">
+                <div class="produk-gambar">🩳</div>
+                <div class="produk-info">
+                    <p class="kategori">CELANA</p>
+                    <h3>Celana Cargo</h3>
+                    <p class="deskripsi">
+                        Celana cargo dengan desain modern dan nyaman.
+                    </p>
+                    <div class="produk-bottom">
+                        <strong>Rp135.000</strong>
+                        <button onclick="tambahKeranjang('Celana Cargo', 135000)">
+                            + Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section class="tentang" id="tentang">
+        <div>
+            <p class="subjudul">TENTANG KAMI</p>
+            <h2>RAZIFASHION</h2>
+
+            <p>
+                RAZIFASHION adalah toko fashion yang menyediakan
+                berbagai macam pakaian seperti baju, batik, celana,
+                dress dan berbagai produk fashion lainnya.
+            </p>
+
+            <p>
+                Kami mengutamakan kualitas, kenyamanan dan harga
+                yang terjangkau bagi pelanggan.
+            </p>
+        </div>
+
+        <div class="tentang-box">
+            <h3>Kenapa Pilih Kami?</h3>
+            <p>✓ Produk berkualitas</p>
+            <p>✓ Harga terjangkau</p>
+            <p>✓ Banyak pilihan</p>
+            <p>✓ Pelayanan ramah</p>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="kontak" id="kontak">
+        <div class="section-title">
+            <p>CONTACT</p>
+            <h2>Hubungi Kami</h2>
+        </div>
+
+        <div class="kontak-container">
+            <div>
+                <h3>RAZIFASHION</h3>
+                <p>📍 Jakarta, Indonesia</p>
+                <p>📱 08xxxxxxxxxx</p>
+                <p>📧 razifashion@gmail.com</p>
+            </div>
+
+            <form onsubmit="kirimPesan(event)">
+                <input type="text" id="nama" placeholder="Nama kamu" required>
+                <input type="email" id="email" placeholder="Email kamu" required>
+                <textarea id="pesan" placeholder="Pesan..." required></textarea>
+
+                <button type="submit" class="btn">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- KERANJANG -->
+    <div class="modal" id="modalKeranjang">
+        <div class="modal-content">
+
+            <button class="close" onclick="tutupKeranjang()">×</button>
+
+            <h2>🛒 Keranjang Belanja</h2>
+
+            <div id="isiKeranjang"></div>
+
+            <div class="total">
+                <span>Total:</span>
+                <strong id="totalHarga">Rp0</strong>
+            </div>
+
+            <button class="checkout" onclick="checkout()">
+                Checkout
+            </button>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="logo">RAZI<span>FASHION</span></div>
+        <p>© 2026 RAZIFASHION. All Rights Reserved.</p>
+    </footer>
+
+    <script src="new.js"></script>
+</body>
+</html>

@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #222;
+}
+
+/* NAVBAR */
+
+header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #b8860b;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    color: #b8860b;
+}
+
+.cart-btn {
+    border: none;
+    background: #222;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#jumlahKeranjang {
+    background: #b8860b;
+    padding: 3px 7px;
+    border-radius: 50%;
+}
+
+/* HERO */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 500px;
+    padding: 60px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.subjudul {
+    color: #b8860b;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #b8860b;
+}
+
+.hero-image {
+    width: 330px;
+    height: 330px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 150px;
+    background: #eee;
+    border-radius: 30px;
+}
+
+/* PRODUK */
+
+.produk-section {
+    background: white;
+    padding: 70px 25px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title p {
+    color: #b8860b;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    margin-top: 8px;
+}
+
+.filter {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.filter button {
+    padding: 10px 18px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filter button:hover {
+    background: #222;
+    color: white;
+}
+
+.produk-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.produk-card {
+    background: #f8f8f8;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.produk-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.produk-gambar {
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 90px;
+    background: #eee;
+}
+
+.produk-info {
+    padding: 20px;
+}
+
+.kategori {
+    font-size: 12px;
+    color: #b8860b;
+    font-weight: bold;
+}
+
+.produk-info h3 {
+    margin: 8px 0;
+}
+
+.deskripsi {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.produk-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.produk-bottom strong {
+    color: #b8860b;
+}
+
+.produk-bottom button {
+    border: none;
+    background: #222;
+    color: white;
+    padding: 9px 12px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/* TENTANG */
+
+.tentang {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 25px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.tentang h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.tentang p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.tentang-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* KONTAK */
+
+.kontak {
+    background: white;
+    padding: 70px 25px;
+}
+
+.kontak-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.kontak-container p {
+    margin-top: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial;
+}
+
+textarea {
+    height: 130px;
+    resize: none;
+}
+
+/* MODAL KERANJANG */
+
+.modal {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.6);
+
+    z-index: 200;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+
+    overflow-y: auto;
+
+    padding: 30px;
+    border-radius: 15px;
+
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+
+    border: none;
+    background: none;
+
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.item-keranjang {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.hapus {
+    border: none;
+    background: #d33;
+    color: white;
+    padding: 6px 9px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 20px;
+    padding-top: 15px;
+
+    border-top: 2px solid #222;
+}
+
+.checkout {
+    width: 100%;
+    margin-top: 20px;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #b8860b;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer p {
+    margin-top: 10px;
+    color: #bbb;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .nav-menu {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .produk-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tentang,
+    .kontak-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .produk-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .cart-btn {
+        font-size: 12px;
+    }
+}
